@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">BopBop</string>
     <string name="app_button">Dale a OK para comenzar!</string>
-    <string name="app_descripotion">Producido y diseñado por Panda Games by Diego C. Ruiz</string>
+    <string name="app_production">Producido y diseñado por \nPanda Games \nby \nDiego C. Ruiz</string>
+    <string name="app_description">Bop Bop! es una app basada en el clásico juego \nBop It! de Hasbro Gaming\n El cual pone a prueba la rapidez de acción del jugador realizando diferentes pruebas y/o desafíos.</string>
 </resources>
