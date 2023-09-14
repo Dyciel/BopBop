@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BopBop</string>
-    <string name="app_descripotion">Ejemplo de como escribir</string>
+    <string name="app_button">Dale a OK para comenzar!</string>
+    <string name="app_descripotion">Producido y diseñado por Panda Games by Diego C. Ruiz</string>
 </resources>
