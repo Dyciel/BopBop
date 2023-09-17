@@ -11,8 +11,10 @@
         android:id="@+id/aboutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#4CAF50"
+        android:backgroundTint="#ECECEC"
         android:text="@string/app_buttonAbout"
+        android:textAllCaps="false"
+        android:textColor="#229328"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,13 +31,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.316"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@mipmap/ic_launcher_round" />
 
     <Button
         android:id="@+id/settingbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#ECECEC"
         android:text="@string/app_buttonSettings"
+        android:textColor="#229328"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -47,7 +51,9 @@
         android:id="@+id/playbutton"
         android:layout_width="152dp"
         android:layout_height="46dp"
+        android:backgroundTint="#ECECEC"
         android:text="@string/app_buttonPlay"
+        android:textColor="#229328"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

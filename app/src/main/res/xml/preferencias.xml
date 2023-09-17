@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="Datos del Jugador" >
         <EditTextPreference
@@ -29,13 +30,14 @@
             android:title="Activar sonidos"
             android:summary="Activa o desactiva los sonidos propios del juego."
             />
-        <CheckBoxPreference
-            android:key="intruction"
+
+        <MultiSelectListPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:title="Instrucciones"
-            android:summary="Personaliza las acciones que desea que aparezcan en el juego."
-            android:entries="@array/valorinstrucciones"
-            android:entryValues="@array/clavesinstrucciones"
-            />
+            app:entries="@array/valorinstrucciones"
+            app:entryValues="@array/clavesinstrucciones"
+            app:key="instruction" />
         <EditTextPreference
             android:key="tamañotexto"
             android:title="Tamaño de la fuente"
