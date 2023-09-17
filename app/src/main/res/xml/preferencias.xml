@@ -37,7 +37,10 @@
             android:title="Instrucciones"
             app:entries="@array/valorinstrucciones"
             app:entryValues="@array/clavesinstrucciones"
-            app:key="instruction" />
+            app:key="instruction"
+            android:summary="Personaliza las acciones que se desea que aparezcan en el juego."
+            />
+
         <EditTextPreference
             android:key="tamañotexto"
             android:title="Tamaño de la fuente"
