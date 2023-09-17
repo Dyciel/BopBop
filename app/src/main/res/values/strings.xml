@@ -1,6 +1,49 @@
 <resources>
     <string name="app_name">BopBop</string>
-    <string name="app_button">Dale a OK para comenzar!</string>
+    <string name="app_buttonSettings">Configuraciones</string>
+    <string name="app_buttonAbout">Acerca del juego</string>
+    <string name="app_buttonPlay">Jugar</string>
     <string name="app_production">Producido y diseñado por \nPanda Games \nby \nDiego C. Ruiz</string>
     <string name="app_description">Bop Bop! es una app basada en el clásico juego \nBop It! de Hasbro Gaming\n El cual pone a prueba la rapidez de acción del jugador realizando diferentes pruebas y/o desafíos.</string>
+
+    <string-array name="valorcolores">
+        <item>Chartreuse</item>
+        <item>Obsidian</item>
+        <item>Bumblebee</item>
+        <item>Punch</item>
+        <item>Crimson</item>
+        <item>Cyan</item>
+
+
+    </string-array>
+
+    <string-array name="clavescolores">
+        <item>verde</item>
+        <item>negro</item>
+        <item>amarillo</item>
+        <item>rosa</item>
+        <item>rojo</item>
+        <item>celeste</item>
+
+
+    </string-array>
+
+    <string-array name="valorinstrucciones">
+        <item>Deslizar</item>
+        <item>Agitar</item>
+        <item>Pulsar</item>
+        <item>Gritar</item>
+        <item>Voltear</item>
+
+    </string-array>
+
+    <string-array name="clavesinstrucciones">
+        <item>des</item>
+        <item>agi</item>
+        <item>pul</item>
+        <item>gri</item>
+        <item>vol</item>
+
+    </string-array>
+
 </resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Datos del Jugador" >
+        <EditTextPreference
+            android:key="datos"
+            android:title="Nombre del Jugador"
+            android:dialogTitle="Escriba el nombre del jugador"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Personalización">
+        <ListPreference
+            android:key="appcolor"
+            android:title="Temas"
+            android:summary="Define la apariencia del juego"
+            android:entries="@array/valorcolores"
+            android:entryValues="@array/clavescolores"
+            android:defaultValue="verde"
+            />
+        <SwitchPreference
+            android:key="music"
+            android:title="Activar música"
+            android:summary="Activa o Desactiva la música de fondo."
+            />
+        <SwitchPreference
+            android:key="sonido"
+            android:title="Activar sonidos"
+            android:summary="Activa o desactiva los sonidos propios del juego."
+            />
+        <CheckBoxPreference
+            android:key="intruction"
+            android:title="Instrucciones"
+            android:summary="Personaliza las acciones que desea que aparezcan en el juego."
+            android:entries="@array/valorinstrucciones"
+            android:entryValues="@array/clavesinstrucciones"
+            />
+        <EditTextPreference
+            android:key="tamañotexto"
+            android:title="Tamaño de la fuente"
+            android:inputType="number"
+            android:dialogTitle="Escriba el tamaño de la fuente"
+            android:defaultValue="12"
+            android:selectAllOnFocus="true"
+            />
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>
