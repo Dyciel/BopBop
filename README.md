@@ -10,6 +10,6 @@ BopBop! es una app que recrea el muy conocido juego Bop It! de la empresa Hasbro
 
 Esta aplicación es desarrollada y diseñada por Diego Castro Ruiz.
 
-APK juego BopBop! : https://drive.google.com/drive/folders/14WRRu_DcEsmZurSOWtlB-pFAajteaLH6?usp=sharing
+APK juego BopBop! : https://drive.google.com/drive/folders/1Ne633smcvhlSpuL0Omhl64YiaDohbsaY?usp=sharing
 
-Video Youtube Actualizado (inserción de auidos e interacción con la pantalla) : https://www.youtube.com/watch?v=c6dUe4-FyuA
+Video Youtube Actualizado (Acelerómetro e Instrucciones randomizadas) : https://youtu.be/kvZzr8kOSnU
