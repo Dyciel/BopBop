@@ -35,6 +35,9 @@ class GameScreen : AppCompatActivity(), SensorEventListener {
 
     private lateinit var gestureManager: GestureDetector
 
+    private lateinit var textPuntaje: TextView
+    private var puntaje = 0
+
     val randomValues = List(10) { Random.nextInt(0, 3) }
     private val instructions = listOf(
         "Desliza por la pantalla.",
@@ -58,22 +61,13 @@ class GameScreen : AppCompatActivity(), SensorEventListener {
         accelerometro = sensorManager?.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
         textInstrucion = findViewById(R.id.instruccion)
+        textPuntaje = findViewById(R.id.puntuacion)
+        textPuntaje.text = puntaje.toString()
         showRandomInstruction()
 
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
-
-        val buttonVictory = findViewById<Button>(R.id.victoryButton)
-
-        buttonVictory.setOnClickListener {
-            mediaVictory.start()
-        }
-        val buttonLose = findViewById<Button>(R.id.loseButton)
-
-        buttonLose.setOnClickListener {
-            mediaLose.start()
-        }
 
     }
 
@@ -100,13 +94,36 @@ class GameScreen : AppCompatActivity(), SensorEventListener {
             velocityX: Float,
             velocityY: Float
         ): Boolean {
-            showToast("Deslizado Exitoso")
-            //textInstrucion.text = "SE DESLIZO"
+
+            if(textInstrucion.text == "Desliza por la pantalla.")
+            {
+                textInstrucion.text = "Bien Hecho!"
+                puntaje = puntaje + 1
+                textPuntaje.text = puntaje.toString()
+                mediaVictory.start()
+                scheduleRandomInstruction()
+            }else if(textInstrucion.text != "Bien Hecho!")
+            {
+                textInstrucion.text = "Fallaste"
+                mediaLose.start()
+            }
             return true
         }
 
         override fun onDoubleTap(e: MotionEvent): Boolean {
-            showToast2("Doble Click")
+            if(textInstrucion.text == "Realiza dos toques.")
+            {
+                textInstrucion.text = "Bien Hecho!"
+                puntaje = puntaje + 1
+                textPuntaje.text = puntaje.toString()
+                mediaVictory.start()
+                scheduleRandomInstruction()
+            }else if(textInstrucion.text != "Bien Hecho!")
+            {
+                textInstrucion.text = "Fallaste"
+                mediaLose.start()
+
+            }
             return true
         }
     }
@@ -126,19 +143,24 @@ class GameScreen : AppCompatActivity(), SensorEventListener {
             val acceleration = Math.sqrt(x * x + y * y + z * z.toDouble()).toFloat()
 
             // You can adjust the acceleration threshold based on your needs
-            val threshold = 10.0f
+            val threshold = 50.0f
 
             if(acceleration > threshold)
             {
                 if(textInstrucion.text == "Agita el dispositivo.")
                 {
-                    //textInstrucion.text = "Wena mi rey"
-                }else if(textInstrucion.text != "Wena mi rey")
-                {
-                    textInstrucion.text = "El loco bruto"
+                    textInstrucion.text = "Bien Hecho!"
+                    puntaje = puntaje + 1
+                    textPuntaje.text = puntaje.toString()
+                    mediaVictory.start()
                     scheduleRandomInstruction()
+                }else if(textInstrucion.text != "Bien Hecho!")
+                {
+                    textInstrucion.text = "Fallaste"
+                    mediaLose.start()
+
+
                 }
-                showToast("Agitado")
             }
         }
     }
